@@ -1,55 +1,189 @@
-:root{
-  --max-width:1100px;
-  --accent:#2a9df4;
-  --muted:#666;
+:root {
+  --max-width: 1100px;
+  --accent: #2a9df4;
+  --muted: #666;
+  --bg-light: #f9f9f9;
 }
 
-*{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;margin:0;color:#222}
-.container{max-width:var(--max-width);margin:0 auto;padding:16px}
-
-/* Header */
-.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
-.site-header .container{display:flex;align-items:center;gap:16px}
-.brand{font-weight:700;color:var(--accent);text-decoration:none}
-.nav-toggle{display:none;background:transparent;border:0;font-size:20px}
-.site-nav{margin-left:auto;display:flex;gap:12px}
-.site-nav a{text-decoration:none;color:#222;padding:8px;border-radius:6px}
-.site-nav a:hover{background:#f0f0f0}
-
-/* Hero */
-.hero{background:linear-gradient(90deg, #f0f7ff, #fff);padding:48px 16px;text-align:center}
-.hero h1{margin:0 0 8px;font-size:28px}
-.hero p{margin:0 0 16px;color:var(--muted)}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
-
-/* Sections */
-.section{padding:24px 16px}
-.events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.card{padding:12px;border:1px solid #eee;border-radius:8px;background:#fff}
-.member-list{padding-left:20px;color:var(--muted)}
-
-/* Footer */
-.site-footer{padding:12px 16px;text-align:center;color:var(--muted);border-top:1px solid #eee}
-
-/* Responsive */
-@media (max-width:800px){
-  .events-grid{grid-template-columns:1fr}
-  .nav-toggle{display:block}
-  .site-nav{display:none;flex-direction:column;background:#fff;position:absolute;right:16px;top:56px;padding:12px;border:1px solid #eee;border-radius:8px}
-  .site-nav.show{display:flex}
-  .hero h1{font-size:22px}
+* {
+  box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
+  margin: 0;
+  color: #222;
+  background: #fff;
 }
 
-/* Form inputs full width on small devices */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== HEADER / 頁首 ===== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.site-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.site-nav a:hover {
+  background: #f0f0f0;
+}
+
+/* ===== HERO / 首頁大圖區 ===== */
+.hero {
+  background: linear-gradient(90deg, #f0f7ff, #fff);
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0 auto;
+  max-width: 700px;
+  color: var(--muted);
+}
+
+/* ===== SECTIONS / 內容區 ===== */
+.section {
+  padding: 32px 16px;
+  background: #fff;
+}
+
+.section:nth-child(even) {
+  background: var(--bg-light);
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.section p {
+  max-width: 800px;
+  color: var(--muted);
+}
+
+/* ===== FORM / 聯絡表單 ===== */
+form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #1a8cd8;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ===== FOOTER / 頁尾 ===== */
+.site-footer {
+  padding: 12px 16px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #eee;
+}
+
+/* ===== RESPONSIVE / 響應式 ===== */
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    right: 16px;
+    top: 56px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+
+  .site-nav.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 600px) {
   input, textarea, button {
     width: 100%;
-    box-sizing: border-box;
   }
 }

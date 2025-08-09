@@ -46,29 +46,30 @@ body {
   text-decoration: none;
 }
 
+/* Fix ☰ button position */
 .nav-toggle {
   display: none;
   background: transparent;
   border: 0;
   font-size: 28px;
   cursor: pointer;
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  z-index: 200; /* 确保按钮在菜单之上 / Ensure above menu */
+  margin-left: auto; /* push to far right in flex layout */
+  order: 2; /* ensure it's last in row */
 }
 
 .site-nav {
   display: flex;
   gap: 12px;
+  order: 1;
 }
 
 .site-nav a {
   text-decoration: none;
   color: #222;
-  padding: 8px 12px;
+  padding: 6px 10px; /* smaller padding */
   border-radius: 6px;
   transition: background 0.2s;
+  font-size: 0.85rem; /* smaller text */
 }
 
 .site-nav a:hover {
@@ -89,4 +90,57 @@ body {
 
 .hero p {
   margin: 0 auto;
-  m
+  max-width: 600px;
+  color: var(--muted);
+}
+
+/* ===== GENERAL SECTIONS ===== */
+.section {
+  padding: 24px 16px;
+}
+
+/* ===== FOOTER / 頁尾 ===== */
+.site-footer {
+  padding: 12px 16px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #eee;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    right: 16px;
+    top: 56px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  .site-nav.show {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===== Images ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form inputs full width on small devices */
+@media (max-width: 600px) {
+  input, textarea, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

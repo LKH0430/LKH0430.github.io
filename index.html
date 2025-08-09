@@ -9,10 +9,12 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#">My Society</a>
+      <a class="brand" href="#home">
+        <img src="logo.png" alt="My Society Logo" />
+      </a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav id="site-nav" class="site-nav">
-        <a href="#home">Home / 首頁</a>
+        <!-- Removed Home link, logo is now home button -->
         <a href="#events">Events & Activities / 活動與事件</a>
         <a href="#news">News & Announcements / 最新公告</a>
         <a href="#leadership">Leadership Board / 領導團隊</a>
@@ -34,21 +36,21 @@
       </div>
     </section>
 
-    <!-- Events & Activities -->
+    <!-- Events -->
     <section id="events" class="container section">
       <h2>Events & Activities / 活動與事件</h2>
       <p>Alumni want to know what’s happening now and soon.<br>
          校友最想知道目前和即將舉辦的活動。</p>
     </section>
 
-    <!-- News & Announcements -->
+    <!-- News -->
     <section id="news" class="container section">
       <h2>News & Announcements / 最新公告</h2>
       <p>For official updates, urgent notices.<br>
          公告與重要資訊的集中地。</p>
     </section>
 
-    <!-- Leadership Board -->
+    <!-- Leadership -->
     <section id="leadership" class="container section">
       <h2>Leadership Board / 領導團隊</h2>
       <p>Shows credibility and transparency.<br>
@@ -79,7 +81,7 @@
     <!-- Contact -->
     <section id="contact" class="container section">
       <h2>Contact Us</h2>
-      <p>Email: example@mysociety.org (static example — no backend).</p>
+      <p>Email: example@mysociety.org</p>
       <form id="contact-form">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Your email" required />

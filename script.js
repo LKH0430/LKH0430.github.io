@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     siteNav.classList.toggle('show');
   });
 
+  // Close menu when clicking a link (on mobile)
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('show');
+    });
+  });
+
   // Contact form handling
   const form = document.getElementById('contact-form');
   form.addEventListener('submit', (e) => {

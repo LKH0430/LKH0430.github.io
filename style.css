@@ -20,10 +20,10 @@ body {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 8px 16px; /* 缩小整体间距 / smaller spacing */
+  padding: 8px 16px;
 }
 
-/* ===== HEADER / 頁首 ===== */
+/* ===== HEADER ===== */
 .site-header {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -37,57 +37,60 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  min-height: 44px; /* 更小高度 / smaller height */
+  min-height: 44px;
 }
 
 .brand {
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 1rem; /* 更小字体 / smaller font */
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  white-space: nowrap;
 }
 
-/* Fix ☰ button position */
+.brand img {
+  height: 32px;
+  width: auto;
+}
+
 .nav-toggle {
   display: none;
   background: transparent;
   border: 0;
-  font-size: 24px; /* 稍微缩小按钮 / slightly smaller button */
+  font-size: 24px;
   cursor: pointer;
   position: absolute;
   right: 16px;
-  top: 10px; /* 靠上 / closer to top */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .site-nav {
   display: flex;
-  gap: 8px; /* 缩小间距 / smaller gap */
+  gap: 8px;
 }
 
 .site-nav a {
   text-decoration: none;
   color: #222;
-  padding: 4px 8px; /* 更小内边距 / smaller padding */
+  padding: 4px 8px;
   border-radius: 4px;
   transition: background 0.2s;
-  font-size: 0.8rem; /* 更小文字 / smaller text */
+  font-size: 0.8rem;
 }
 
 .site-nav a:hover {
   background: #f0f0f0;
 }
 
-/* ===== HERO / 首頁大圖區 ===== */
+/* ===== HERO ===== */
 .hero {
   background: linear-gradient(90deg, #f0f7ff, #fff);
-  padding: 32px 16px; /* 缩小上下间距 / smaller padding */
+  padding: 32px 16px;
   text-align: center;
 }
 
 .hero h1 {
   margin: 0 0 8px;
-  font-size: 1.8rem; /* 稍小标题 / slightly smaller title */
+  font-size: 1.8rem;
 }
 
 .hero p {
@@ -99,11 +102,12 @@ body {
 /* ===== GENERAL SECTIONS ===== */
 .section {
   padding: 20px 16px;
+  scroll-margin-top: 60px; /* Fix anchor offset */
 }
 
-/* ===== FOOTER / 頁尾 ===== */
+/* ===== FOOTER ===== */
 .site-footer {
-  padding: 8px 16px; /* 更小间距 / smaller spacing */
+  padding: 8px 16px;
   text-align: center;
   color: var(--muted);
   border-top: 1px solid #eee;
@@ -120,7 +124,7 @@ body {
     background: #fff;
     position: absolute;
     right: 16px;
-    top: 44px; /* 紧贴缩小后的导航栏 / closer to smaller header */
+    top: 44px;
     padding: 8px;
     border: 1px solid #eee;
     border-radius: 6px;
@@ -134,13 +138,11 @@ body {
   }
 }
 
-/* ===== Images ===== */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Form inputs full width on small devices */
 @media (max-width: 600px) {
   input, textarea, button {
     width: 100%;

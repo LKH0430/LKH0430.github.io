@@ -40,3 +40,16 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
   .site-nav.show{display:flex}
   .hero h1{font-size:22px}
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form inputs full width on small devices */
+@media (max-width: 600px) {
+  input, textarea, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

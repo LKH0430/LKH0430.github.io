@@ -58,9 +58,11 @@ body {
   font-size: 24px;
   cursor: pointer;
   position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 8px; /* closer to top edge */
+  right: 8px; /* closer to right edge */
+  transform: none; /* remove centering */
+  padding: 4px;
+  z-index: 200; /* keep above nav */
 }
 
 .site-nav {

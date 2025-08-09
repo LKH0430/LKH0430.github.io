@@ -35,8 +35,7 @@ body {
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
+  justify-content: space-between; /* 保证左右分布 */
   min-height: 44px;
 }
 
@@ -51,18 +50,17 @@ body {
   width: auto;
 }
 
+/* FIXED BUTTON POSITION */
 .nav-toggle {
   display: none;
   background: transparent;
   border: 0;
   font-size: 24px;
   cursor: pointer;
-  position: absolute;
-  top: 8px; /* closer to top edge */
-  right: 8px; /* closer to right edge */
-  transform: none; /* remove centering */
   padding: 4px;
-  z-index: 200; /* keep above nav */
+  z-index: 200;
+  /* 关键调整 — 让它在 flex 布局里靠右 */
+  margin-left: auto;
 }
 
 .site-nav {
@@ -104,7 +102,7 @@ body {
 /* ===== GENERAL SECTIONS ===== */
 .section {
   padding: 20px 16px;
-  scroll-margin-top: 60px; /* Fix anchor offset */
+  scroll-margin-top: 60px;
 }
 
 /* ===== FOOTER ===== */

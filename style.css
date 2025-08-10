@@ -141,9 +141,9 @@ body {
 }
 
 .hero p {
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   max-width: 600px;
-  color: var(--muted);
+  color: #111111;
 }
 
 .hero-image {

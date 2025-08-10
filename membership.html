@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCMA Alumni - Membership</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="My Society Logo" />
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="events.html"><span>Events & Activities</span><br><span>活動與事件</span></a>
+        <a href="news.html"><span>News & Announcements</span><br><span>最新公告</span></a>
+        <a href="leadership.html"><span>Leadership Board</span><br><span>領導團隊</span></a>
+        <a href="membership.html" class="active"><span>Membership</span><br><span>會員專區</span></a>
+        <a href="history.html"><span>History</span><br><span>理事會歷史</span></a>
+        <a href="gallery.html"><span>Gallery</span><br><span>照片與影片</span></a>
+        <a href="contact.html"><span>Contact Us</span><br><span>聯絡</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container main-glass-bg">
+      <section class="section">
+        <h2>Membership / 會員專區</h2>
+        <p>Join our alumni community to stay updated and enjoy exclusive benefits.<br>
+           加入我們的校友會，獲取最新資訊並享受專屬福利。</p>
+
+        <section>
+          <h3>Membership Benefits / 會員福利</h3>
+          <ul>
+            <li>Access to exclusive events and workshops<br>參與專屬活動及工作坊</li>
+            <li>Monthly newsletter and updates<br>每月通訊與最新消息</li>
+            <li>Networking opportunities with alumni<br>與校友交流機會</li>
+            <li>Discounts on merchandise and events<br>商品及活動折扣</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>How to Join / 如何加入</h3>
+          <p>Please fill out the membership application form below.<br>請填寫以下會員申請表格。</p>
+
+          <form id="membership-form" action="#" method="post">
+            <label for="name">Full Name / 姓名</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email">Email / 電郵</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="phone">Phone Number / 電話</label><br />
+            <input type="tel" id="phone" name="phone" /><br /><br />
+
+            <label for="graduation">Graduation Year / 畢業年份</label><br />
+            <input type="number" id="graduation" name="graduation" min="1900" max="2099" required /><br /><br />
+
+            <button type="submit">Submit / 提交</button>
+          </form>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 SCMA Alumni Society</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

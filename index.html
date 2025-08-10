@@ -1,103 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My School Society</title>
+  <title>SCMA Alumni - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#home">
+      <a class="brand" href="index.html">
         <img src="logo.png" alt="My Society Logo" />
       </a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav id="site-nav" class="site-nav">
-        <!-- Removed Home link, logo is now home button -->
-        <a href="#events">Events & Activities / 活動與事件</a>
-        <a href="#news">News & Announcements / 最新公告</a>
-        <a href="#leadership">Leadership Board / 領導團隊</a>
-        <a href="#membership">Membership / 會員專區</a>
-        <a href="#history">History / 理事會歷史</a>
-        <a href="#gallery">Gallery / 照片與影片</a>
-        <a href="#contact">Contact Us</a>
+        <a href="events.html"><span>Events & Activities</span><br /><span>活動與事件</span></a>
+        <a href="news.html"><span>News & Announcements</span><br /><span>最新公告</span></a>
+        <a href="leadership.html"><span>Leadership Board</span><br /><span>領導團隊</span></a>
+        <a href="membership.html"><span>Membership</span><br /><span>會員專區</span></a>
+        <a href="history.html"><span>History</span><br /><span>理事會歷史</span></a>
+        <a href="gallery.html"><span>Gallery</span><br /><span>照片與影片</span></a>
+        <a href="contact.html"><span>Contact Us</span><br /><span>聯絡</span></a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Home -->
-    <section id="home" class="hero">
-      <div class="container">
-        <h1>Home / 首頁</h1>
-        <p>Always first; sets the tone and gives quick access to key updates.<br>
-           首頁定下網站基調並快速呈現重點更新。</p>
-      </div>
-    </section>
+    <div class="container main-glass-bg">
+      <section class="section hero">
+        <div class="hero-title-wrapper">
+          <h1>Welcome to SCMA Alumni <br /> 歡迎來到理事會校友會</h1>
+          <!-- logo放标题后面，用作背景 -->
+          <img src="logo.png" alt="Background Logo" class="hero-bg-logo" />
+        </div>
+        <p>Your connection to our alumni community, events, news, and history.<br />
+          與校友社群、活動、新聞和歷史保持聯繫。</p>
+      </section>
 
-    <!-- Events -->
-    <section id="events" class="container section">
-      <h2>Events & Activities / 活動與事件</h2>
-      <p>Alumni want to know what’s happening now and soon.<br>
-         校友最想知道目前和即將舉辦的活動。</p>
-    </section>
+      <section class="section info-grid">
+        <article>
+          <h2>Upcoming Events <br /> 即將舉辦的活動</h2>
+          <ul>
+            <li><strong>Annual Gala Dinner</strong> - 30 Sep 2025<br />年度晚宴，歡迎報名參加</li>
+            <li><strong>Career Workshop</strong> - 15 Oct 2025<br />職涯發展工作坊，助力成長</li>
+            <li><strong>Community Service Day</strong> - 10 Nov 2025<br />社區服務日，共創美好社會</li>
+          </ul>
+        </article>
 
-    <!-- News -->
-    <section id="news" class="container section">
-      <h2>News & Announcements / 最新公告</h2>
-      <p>For official updates, urgent notices.<br>
-         公告與重要資訊的集中地。</p>
-    </section>
-
-    <!-- Leadership -->
-    <section id="leadership" class="container section">
-      <h2>Leadership Board / 領導團隊</h2>
-      <p>Shows credibility and transparency.<br>
-         展示理事會的專業與透明度。</p>
-    </section>
-
-    <!-- Membership -->
-    <section id="membership" class="container section">
-      <h2>Membership / 會員專區</h2>
-      <p>How to join or renew; important for growing the alumni base.<br>
-         提供加入或續會資訊，方便擴大校友群。</p>
-    </section>
-
-    <!-- History -->
-    <section id="history" class="container section">
-      <h2>History / 理事會歷史</h2>
-      <p>Good for background reference, but not urgent info.<br>
-         背景資訊，適合補充了解，但不是緊急內容。</p>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="container section">
-      <h2>Gallery / 照片與影片</h2>
-      <p>Engagement and nostalgia; can be placed after core info.<br>
-         互動與懷舊的內容，可排在核心資訊之後。</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="container section">
-      <h2>Contact Us</h2>
-      <p>Email: example@mysociety.org</p>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" class="btn">Send (demo)</button>
-        <p class="note">This contact is client-side demo only; to actually send messages you need a backend or a service.</p>
-      </form>
-    </section>
+        <article>
+          <h2>Latest News <br /> 最新消息</h2>
+          <ul>
+            <li><strong>New Leadership Board Elected</strong> - Aug 2025<br />新理事會成員當選，期待新氣象</li>
+            <li><strong>Membership Renewal Open</strong> - Jul 2025<br />會員續會開始，請及時辦理</li>
+            <li><strong>New Website Launched</strong> - Jun 2025<br />全新響應式網站上線</li>
+          </ul>
+        </article>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; My School Society</p>
+      <p>&copy; 2025 SCMA Alumni Society</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

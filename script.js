@@ -43,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
   lightbox.addEventListener("click", function () {
     lightbox.style.display = "none";
   });
+
 });

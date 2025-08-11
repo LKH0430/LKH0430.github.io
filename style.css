@@ -29,7 +29,7 @@ body {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: var(--header-bg-img) no-repeat center center / cover;
+  background:rgba(173, 216, 230, 0.2) no-repeat center center / cover;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid #eee;
@@ -449,7 +449,8 @@ button:hover {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550px; /* 根据需要调整大小 */
+  width : 120%;
+  max-width: 550px; /* 根据需要调整大小 */
   height: auto;
   opacity: 0.5; /* 透明度低，不抢眼 */
   filter: blur(2px);
@@ -460,6 +461,12 @@ button:hover {
   background: rgba(255 255 255 / 0.3); /* 半透明白背景 */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 480px) {
+  .hero-bg-logo {
+    width: 90%; /* 在小屏上占更大比例 */
+  }
 }
 
 /* hero标题置于logo之上 */

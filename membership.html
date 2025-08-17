@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SCMA Alumni - Membership</title>
   <link rel="stylesheet" href="style.css" />
+  
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
@@ -30,11 +34,12 @@
   <main>
     <div class="container main-glass-bg">
       <section class="section">
-        <h2>Membership / 會員專區</h2>
-        <p>Join our alumni community to stay updated and enjoy exclusive benefits.<br>
+
+        <h2 class="animate__animated animate__fadeInUp animate__delay-0-3s ">Membership / 會員專區</h2>
+        <p class="animate__animated animate__fadeInUp animate__delay-0-6s ">Join our alumni community to stay updated and enjoy exclusive benefits.<br>
            加入我們的校友會，獲取最新資訊並享受專屬福利。</p>
 
-        <section>
+        <section class="animate__animated animate__fadeInUp animate__delay-0-9s ">
           <h3>Membership Benefits / 會員福利</h3>
           <ul>
             <li>Access to exclusive events and workshops<br>參與專屬活動及工作坊</li>
@@ -42,20 +47,42 @@
             <li>Networking opportunities with alumni<br>與校友交流機會</li>
             <li>Discounts on merchandise and events<br>商品及活動折扣</li>
           </ul>
+	<br>
+
         </section>
 
-        <section>
-          <h3>How to Join / 如何加入</h3>
+        <section class="animate__animated animate__fadeInUp animate__delay-1-2s ">
+          <h3 class="section-subtitle">How to Join / 如何加入</h3>
           <p>Please fill out the membership application form below.<br>請填寫以下會員申請表格。</p>
 
-         <iframe 
-		src="https://docs.google.com/forms/d/e/1FAIpQLSde2EeCCcFZoXeN-odAa-79LCiccXT83n4uxAa_1wEDPljGzQ/viewform?embedded=true" 		width="100%" 
-		height="1100" 
-		frameborder="0" 
-		marginheight="0" 
-		marginwidth="0">Loading…
 
-	</iframe>
+         <form id="membership-form" action="https://formspree.io/f/xovlzeop" method="POST">
+
+  		<label for="chinese-name">Chinese Name / 中文姓名:</label><br>
+ 		 <input type="text" id="chinese-name" name="chinese-name" required><br><br>
+
+  		<label for="english-name">English Name / 英文姓名:</label><br>
+  		<input type="text" id="english-name" name="english-name" required><br><br>
+
+ 		 <label for="sex">Sex / 性别:</label><br>
+  		<select id="sex" name="sex" required>
+  			<option value="">Select / 选择</option>
+  			<option value="male">Male / 男</option>
+    			<option value="female">Female / 女</option>
+  		</select><br><br>
+
+  		<label for="email">Gmail / 邮箱:</label><br>
+ 		<input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+
+  		<label for="grad-year">Graduation Year / 毕业年份:</label><br>
+  		<input type="number" id="grad-year" name="grad-year" min="1800" max="2100" required><br><br>
+
+ 		<label for="phone">Phone Number / 电话号码:</label><br>
+ 		<input type="tel" id="phone" name="phone" placeholder="+60 1234 5678" pattern="[0-9]{8,12}" required><br><br>
+
+ 		<button type="submit">Submit / 提交</button>
+		</form>
+
 
         </section>
       </section>

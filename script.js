@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // 导航菜单切换代码
+  
+  
+  // 页面载入时淡入
+  document.body.classList.add('fade-in');
+
+  // 点击链接时淡出
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#")) { // 确保不是锚点链接
+        e.preventDefault();
+        document.body.classList.remove("fade-in");
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 200); // 1 秒后跳转
+      }
+    });
+  });
+
+
+// 导航菜单切换代码
   const navToggle = document.getElementById('nav-toggle');
   const siteNav = document.getElementById('site-nav');
 
@@ -43,5 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
   lightbox.addEventListener("click", function () {
     lightbox.style.display = "none";
   });
+
+
+//Contact us form 
+
+const contactForm = document.getElementById('contact-form');
+if(contactForm){
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    const res = await fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if(res.ok){
+      alert("Message sent!");
+      contactForm.reset();
+    } else {
+      alert("Failed to send.");
+    }
+  });
+}
+
+
 
 });

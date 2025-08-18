@@ -108,6 +108,8 @@ body::before {
   right: 0;
   box-sizing: border-box;
   color: var(--text-color);
+
+  position: sticky;   position: relative;
 }
 
 .site-header.hidden {

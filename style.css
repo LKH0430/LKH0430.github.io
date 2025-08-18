@@ -686,8 +686,8 @@ button:hover {
     display: block;
     position: absolute;
     top: 20px;
-    right: 16px;
-    margin-left: 0;
+    right: 20px;
+    margin: 0;
   }
 
   .site-nav {

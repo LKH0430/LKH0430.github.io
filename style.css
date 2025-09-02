@@ -242,12 +242,13 @@ body::before {
 
 .hero-title-wrapper h1 {
   font-size: 55px; /* 改成你想要的大小 */
-  font-weight: 400; /* 更粗一点 */
+  font-weight: 420; /* 更粗一点 */
   line-height: 1.2;
   top: 20px;
   position: relative;
   z-index: 1;
   color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -410,10 +411,22 @@ body::before {
 .news-item h3 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #003366;   /* 深蓝色，显得专业 */
 }
+
+.event-item h2,
+.news-item h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366;   /* 深蓝色，显得专业 */
+  border-bottom: 2px solid #003366;
+  width: 40%;
+}
+
 
 /* 内容文字 */
 .event-item p,
